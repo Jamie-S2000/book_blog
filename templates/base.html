@@ -7,13 +7,13 @@
   <title>CodeStar Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link rel="stylesheet" type='text/css' href="{% static 'assets/styles.css' %}">
-
+  <script src="https://kit.fontawesome.com/b220418fa0.js" crossorigin="anonymous"></script>
 
 <body>
 
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-        <a class="navbar-brand" href="#">Navbar</a>
+        <a class="navbar-brand" href="#">Jamie's Book Blog</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -21,7 +21,7 @@
         <div class="collapse navbar-collapse" id="navbarColor01">
           <ul class="navbar-nav mr-auto">
             <li class="nav-item active">
-              <a class="nav-link" href="#">Home</a>
+              <a class="nav-link" href="{% url 'home' %}">Home</a>
             </li>
         </div>
       </nav>
@@ -33,6 +33,19 @@
         {% endblock content %}
 
     </main>
+
+    <footer class="footer fixed-bottom mt-auto py-3 bg-primary">
+      <p class="m-0 text-center text-white">Follow me at: 
+        <a href="https://www.facebook.com/" target="_blank" rel="noopener" aria-label="Visit our Facebook page (opens in new tab)">
+        <i class="fa-brands fa-facebook-f text-white"></i>
+        </a>
+        <a href="https://www.twitter.com/" target="_blank" rel="noopener" aria-label="Visit our Twitter page (opens in new tab)">
+          <i class="fa-brands fa-x-twitter text-white"></i>
+        </a>
+        <a href="https://www.instagram.com/" target="_blank" rel="noopener" aria-label="Visit our Instagram page (opens in new tab)">
+          <i class="fa-brands fa-instagram text-white"></i>
+      </a>
+  </footer>
 
 </body>
 
