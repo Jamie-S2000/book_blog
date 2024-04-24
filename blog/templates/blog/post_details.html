@@ -11,4 +11,20 @@
 
 <p>{{ post.content }}</p>
 
+<h2>Comments</h2>
+{% for comment in comments %}
+<div class="p-2 comments
+          {% if not comment.approved and comment.author == user %}
+          faded{% elif not comment.approved %} d-none{% endif %}">
+  <p> {{ comment.author }} </p>
+  <p id="comment{{ comment.id }}"> {{ comment.body }}</p>
+  {% if not comment.approved and comment.author == user %}
+  <p class="approval">
+    This comment is awaiting approval
+  </p>
+  {% endif %}
+</div>
+{% endfor %}
+
+
 {% endblock content %}
