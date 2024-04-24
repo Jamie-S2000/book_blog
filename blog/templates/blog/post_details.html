@@ -1,14 +1,14 @@
 {% extends 'base.html' %} {% block content %}
 {% load static %}
 
-<h1>{{ post.book_title }}<small class="text-body-secondary"> by {{ book_author }}</small></h1>
+<h1>{{ post.book_title }}<small class="text-body-secondary"> by {{ post.book_author }}</small></h1>
 
 <figure class="text-center">
     <blockquote class="blockquote">
-      <p class="mb-0">{{ fave_quote }}</p>
+      <p class="mb-0">{{ post.fave_quote }}</p>
     </blockquote>
 </figure>
 
-<p>{{ content }}</p>
+<p>{{ post.content }}</p>
 
 {% endblock content %}
