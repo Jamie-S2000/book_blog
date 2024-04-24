@@ -13,7 +13,9 @@
                 {% for post in post_list %}
                 <div class="col">
                     <div class="card border-primary mb-4" style="max-width: 20rem;">
-                        <div class="card-header">{{ post.book_title }}</div>
+                        <a href="{% url 'post_details' post.slug %}" class="post-link">
+                            <div class="card-header">{{ post.book_title }}</div>
+                        </a>
                         <div class="card-body">
                           <h4 class="card-title">{{ post.book_title }}</h4>
                         </div>
