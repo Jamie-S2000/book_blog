@@ -24,7 +24,7 @@
   <div class="p-2 comments
           {% if not comment.approved and comment.author == user %}
           faded{% elif not comment.approved %} d-none{% endif %}">
-    <p> {{ comment.author }} </p>
+    <p>{{ comment.author }} </p>
     <p id="comment{{ comment.id }}"> {{ comment.body | linebreaks }}</p>
     {% if not comment.approved and comment.author == user %}
     <p class="approval">
