@@ -16,64 +16,73 @@
 
 <body class="d-flex flex-column min-vh-100">
 
-    <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-        <a class="navbar-brand" href="#">Jamie's Book Blog</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-      
-        <div class="collapse navbar-collapse" id="navbarColor01">
-          <ul class="navbar-nav mr-auto">
-            <li class="nav-item active">
-              <a class="nav-link" href="{% url 'home' %}">Home</a>
-            </li>
-            {% if user.is_authenticated %}
-            <li class="nav-item">
-	            <a class="nav-link {% if request.path == logout_url %}active{% endif %}" aria-current="page" href="{% url 'account_logout' %}">Logout</a>
-            </li>
-            {% else %}
-            <li class="nav-item">
-	            <a class="nav-link {% if request.path == signup_url %}active{% endif %}" aria-current="page"
-		            href="{% url 'account_signup' %}">Register</a>
-              </li>
-            <li class="nav-item">
-	            <a class="nav-link {% if request.path == login_url %}active{% endif %}" aria-current="page" href="{% url 'account_login' %}">Login</a>
-            </li>
-            {% endif %}
-        </div>
-      </nav>
-      
-      <div>
-        {% for message in messages %}
-        <div class="alert {{ message.tags }} alert-dismissible alert-success fade show" role="alert">
-          {{ message | safe}}
-          <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-        </div>
-        {% endfor %}
-      </div>
-    <main class="flex-grow-1 main-bg">
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <a class="navbar-brand" href="#">Jamie's Book Blog</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01"
+      aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
 
-        {% block content %}
-        <!-- Content Goes here -->
-        {% endblock content %}
+    <div class="collapse navbar-collapse" id="navbarColor01">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="{% url 'home' %}">Home</a>
+        </li>
+        {% if user.is_authenticated %}
+        <li class="nav-item">
+          <a class="nav-link {% if request.path == logout_url %}active{% endif %}" aria-current="page"
+            href="{% url 'account_logout' %}">Logout</a>
+        </li>
+        {% else %}
+        <li class="nav-item">
+          <a class="nav-link {% if request.path == signup_url %}active{% endif %}" aria-current="page"
+            href="{% url 'account_signup' %}">Register</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link {% if request.path == login_url %}active{% endif %}" aria-current="page"
+            href="{% url 'account_login' %}">Login</a>
+        </li>
+        {% endif %}
+    </div>
+  </nav>
 
-    </main>
+  <div>
+    {% for message in messages %}
+    <div class="alert {{ message.tags }} alert-dismissible alert-success fade show" role="alert">
+      {{ message | safe}}
+      <button type="button" class="btn-close btn btn-secondary" data-bs-dismiss="alert"
+        aria-label="Close">Close</button>
+    </div>
+    {% endfor %}
+  </div>
+  <main class="flex-grow-1 main-bg">
 
-    <footer class="footer mt-auto py-3 bg-primary">
-      <p class="m-0 text-center text-white">Follow me at: 
-        <a href="https://www.facebook.com/" target="_blank" rel="noopener" aria-label="Visit our Facebook page (opens in new tab)">
+    {% block content %}
+    <!-- Content Goes here -->
+    {% endblock content %}
+
+  </main>
+
+  <footer class="footer mt-auto py-3 bg-primary">
+    <p class="m-0 text-center text-white">Follow me at:
+      <a href="https://www.facebook.com/" target="_blank" rel="noopener"
+        aria-label="Visit our Facebook page (opens in new tab)">
         <i class="fa-brands fa-facebook-f text-white"></i>
-        </a>
-        <a href="https://www.twitter.com/" target="_blank" rel="noopener" aria-label="Visit our Twitter page (opens in new tab)">
-          <i class="fa-brands fa-x-twitter text-white"></i>
-        </a>
-        <a href="https://www.instagram.com/" target="_blank" rel="noopener" aria-label="Visit our Instagram page (opens in new tab)">
-          <i class="fa-brands fa-instagram text-white"></i>
+      </a>
+      <a href="https://www.twitter.com/" target="_blank" rel="noopener"
+        aria-label="Visit our Twitter page (opens in new tab)">
+        <i class="fa-brands fa-x-twitter text-white"></i>
+      </a>
+      <a href="https://www.instagram.com/" target="_blank" rel="noopener"
+        aria-label="Visit our Instagram page (opens in new tab)">
+        <i class="fa-brands fa-instagram text-white"></i>
       </a>
   </footer>
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
   {% block extras %}
   {% endblock %}
 
