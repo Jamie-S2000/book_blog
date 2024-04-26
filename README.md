@@ -43,3 +43,48 @@ The agile methodolology was used to plan and track the project's progress. This 
 The colour scheme used was from the 'minty' bootstrap template created by Bootswatch.
 
 ### Features
+
+#### Nav bar
+The Navbar is permanant accross the entire website allowing the user easy navigation. It allows users to:
+- Go back to home
+- Register
+- Log in
+- Log out
+
+![Screenshot of navbar](/assets/navbar.png)
+![Screenshot of navbar](/assets/navbar2.png)
+
+#### Footer
+The footer is also permanent across the site giving users access to linked social media sites.
+
+![Screenshot of footer](/assets/footer.png)
+
+#### Post List
+The post list if on the home page of the site. It allows users to navigate between posts and provides a small quote from the book.
+
+![Screenshot of post list](/assets/postlist.png)
+
+#### Comment
+The site uses a crispy form to allow users to comment on posts. These comments can be edited and deleted by the user who posted them and viewed by all the users.
+
+![Screenshot of comments](/assets/comments.png)
+![Screenshot of comments](/assets/comments2.png)
+
+#### Registration, sign in, sign out
+The site allows users to register an account so they can comment on posts. It also allows them to sign in and out once they have an account.
+
+![Screenshot of registration](/assets/register.png)
+![Screenshot of login](/assets/signin.png)
+![Screenshot of logout](/assets/signout.png)
+
+#### Admin site
+The admin site allows the admin to make posts and approve comments on posts. The approval on comments is to make sure they are appropriate for the blog.
+![Screenshot of Admin site](/assets/adminsite.png)
+
+### Testing
+
+The project has gone through extencive testing as it has been developed. Each feature was tested when it was added and later once the site was compleated. Google Dev tools was used to test the site on different size deviced during development and the site was used on phones and tablets once finished 
+
+#### Known bugs
+- above the comment crispy form there is some text that says '*body'
+
