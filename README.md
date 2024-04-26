@@ -3,8 +3,11 @@
 
 Jamie's book blog is a small personal blog. It is designed for persnal use and for users to be able to have conversations within posts.
 
+Live site: https://book-blog-a67e7f179c17.herokuapp.com/
+
 ## Contents
 - [Planning and Development](#planning-and-development)
+- [Deployment](#deployment)
 
 
 ## Planning and Development
@@ -108,3 +111,85 @@ Lighthouse was used to est the site load:
 ![Screenshot of Lighthoue test](/assets/lighthouse.png)
 
 ## Deployment
+The site was deployed to Heroku and uses ElephantSQL for the database.
+
+### ElaphantSQL
+
+A database was created with SQL:
+- Select 'Create New Instance'
+- Give a database a 'name' and select a plan
+- Click ' Select Region', choose your region and then click 'Review'
+- Cick on your recently created instance
+- Copy the database URL. This will needed to be inserted in the GitHub repository under 'settings.py' and in Heroku
+
+### Heroku
+- click "New" then "Create new app".
+- Create a unique app name , select the correct region and create app.
+- This will direct you to the deploy tab.
+- Navigate to settings.
+- Go to the Config Vars section, click add and add with:
+- config var named 'SECRET_KEY' and create a secret key for this
+- config var names 'DATABASE_URL', this will use the ElephantSQL url
+- Once this is done navigate to deploy.
+- Select GitHub as your deployment method.
+- Search for the repository and select it to connect.
+- select the deployment type you would like to use and deploy.
+
+### env.py
+In the project create an env.py file in the root directory.
+The elephantSQL database URL should be used as the DATABASE_URL
+A secret key should be pasted as the SECRET_KEY value, this does not need to be the same as the Heroku one.
+
+### settings.py
+In settings.py add:
+```
+from pathlib import Path
+import os
+import dj_database_url
+if os.path.isfile('env.py'):
+    import env
+```
+
+### Final Steps
+- Link file to the templates directory in Heroku, place under BASE_DIR:
+```
+BASE_DIR = Path(__file__).resolve().parent.parent
+TEMPLATES_DIR = os.path.join(BASE_DIR, 'templates')
+```
+
+- Change the template direcory to TEMPLATES_DIR and place in templates array:
+```
+TEMPLATES = [
+    {
+        'BACKEND': 'django.template.backends.django.DjangoTemplates',
+        'DIRS': [TEMPLATES_DIR],
+        'APP_DIRS': True,
+        'OPTIONS': {
+            'context_processors': [
+                'django.template.context_processors.debug',
+                'django.template.context_processors.request',
+                'django.contrib.auth.context_processors.auth',
+                'django.contrib.messages.context_processors.messages',
+            ],
+        },
+    },
+]
+```
+
+- Add heroku to the ALLOWED_HOSTS:
+```
+ALLOWED_HOSTS=["project_name.herokuapp.com", "localhost"]
+```
+
+- create static and template files at the top leavel of the directory
+
+- create a Profile and add:
+```
+web: gunicorn project_name.wsgi
+```
+
+### Final Heroku deployment
+- **Make sure debug is set to 'False'**
+- click deploy
+- deploy branch
+
