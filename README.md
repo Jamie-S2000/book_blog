@@ -8,6 +8,8 @@ Live site: https://book-blog-a67e7f179c17.herokuapp.com/
 ## Contents
 - [Planning and Development](#planning-and-development)
 - [Deployment](#deployment)
+- [Languages and Frameworks](#languages-and-frameworks)
+- [Credits](#credits)
 
 
 ## Planning and Development
@@ -193,3 +195,14 @@ web: gunicorn project_name.wsgi
 - click deploy
 - deploy branch
 
+## Languages and frameworks
+The languages and framewokrs used are:
+- HTML
+- CSS
+- Python
+- Django
+- Bootstrap
+
+## Credits
+- https://bootswatch.com - minty style used in the blog
+- https://fontawsome.com - socialmeda icons
