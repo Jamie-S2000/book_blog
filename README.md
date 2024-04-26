@@ -88,3 +88,23 @@ The project has gone through extencive testing as it has been developed. Each fe
 #### Known bugs
 - above the comment crispy form there is some text that says '*body'
 
+#### Validator Testing
+
+##### HTML Testing
+
+Website used to validate HTML code: https://validator.w3.org/
+
+The errors flagged in the HTML code were from the django that it in the code.
+
+##### Python testing
+
+Website used to validate Python files: https://pep8ci.herokuapp.com/
+
+The errors flagged in this were mainly line length or spaces between lines and didn't affect the project
+
+##### Lighthouse
+
+Lighthouse was used to est the site load:
+![Screenshot of Lighthoue test](/assets/lighthouse.png)
+
+## Deployment
