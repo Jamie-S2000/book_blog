@@ -25,4 +25,4 @@ for (let button of editButtons) {
     });
   }
 
-  console.log("hello")
+  
