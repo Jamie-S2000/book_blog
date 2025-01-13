@@ -129,7 +129,8 @@ The errors flagged in this were mainly line length or spaces between lines and d
 
 ##### Lighthouse
 
-Lighthouse was used to est the site load:
+Lighthouse was used to test the site load:
+
 ![Screenshot of Lighthoue test](/assets/lighthouse.png)
 
 ## Deployment
