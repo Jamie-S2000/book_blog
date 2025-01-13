@@ -89,6 +89,7 @@ The admin site allows the admin to make posts and approve comments on posts. The
 ### Testing
 
 The project has gone through extencive testing as it has been developed. Each feature was tested when it was added and later once the site was compleated. Google Dev tools was used to test the site on different size deviced during development and the site was used on phones and tablets once finished
+
 Here is the full documentation: [Testing](/TESTING.md)
 
 #### Known bugs
