@@ -1,13 +1,14 @@
 # Testing
 
 All web page Testing was conducted on an iMac (safari, Google Chrome), Windows Laptop (google Chrome, Microsoft Edge), Samsung Tablet (Google Chrome and Samsung internet) and Samsung Phone (Google Chrome and Samsung Internet). This was to make sure all features worked on different operating systems and screen sizes.
+
 The Admin testing was done on an iMac and was done to check the database functionality.
 
 ## Web Page testing
 
-### Nav Bar:
+### Nav Bar
 
-**Nav bar links:**
+**Nav bar links**
 Expected - when a user clicks each link, the links take the user to the desired web page (Home, Register, Login and Logout)
 Test - by clicking the link to each page
 Result - the feature acted normally and directed the user to the desired page
@@ -17,7 +18,7 @@ Expected -  when the user is signed out, the nav bar should display Register and
 Test - check the navbar links are correct when signed in and signed out
 Result - the feature works as expected and displays the correct links when signed in and signed out
 
-**Nav bar dropdown:**
+**Nav bar dropdown**
 Expected - on smaller screens, a dropdown button is displayed instead of the full menu. When the user presses the dropdown button, the nav bar displays a drop-down menu
 Test - by viewing on a smaller screen and clicking the dropdown button
 Result - the feature did not respond due to Bootstrap 4 being used in the HTML while the site was using Bootstrap 5
