@@ -119,7 +119,7 @@ Here is the full documentation: [Testing](/TESTING.md)
 
 Website used to validate HTML code: https://validator.w3.org/
 
-The errors flagged in the HTML code were from the django that it in the code.
+The error in the HTML code on the sign up page is from a 3rd party source and cannot be changed. Other than this all pages passed the HTML validator test.
 
 ##### Python testing
 
