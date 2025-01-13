@@ -8,15 +8,6 @@ The Admin testing was done on an iMac and was done to check the database functio
 
 ### Nav Bar
 
-**Nav bar links**
-
-
-Expected - when a user clicks each link, the links take the user to the desired web page (Home, Register, Login and Logout)
-
-Test - by clicking the link to each page
-
-Result - the feature acted normally and directed the user to the desired page
-
 **Nav bar links when signed in/signed out**
 
 Expected -  when the user is signed out, the nav bar should display Register and Login, when the user is signed in the nav bar should display Logout
@@ -24,6 +15,14 @@ Expected -  when the user is signed out, the nav bar should display Register and
 Test - check the navbar links are correct when signed in and signed out
 
 Result - the feature works as expected and displays the correct links when signed in and signed out
+
+**Nav bar links**
+
+Expected - when a user clicks each link, the links take the user to the desired web page (Home, Register, Login and Logout)
+
+Test - by clicking the link to each page
+
+Result - the feature acted normally and directed the user to the desired page
 
 **Nav bar dropdown**
 
