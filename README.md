@@ -59,6 +59,11 @@ The Navbar is permanant accross the entire website allowing the user easy naviga
 ![Screenshot of navbar](/assets/navbar.png)
 ![Screenshot of navbar](/assets/navbar2.png)
 
+It also features a dropdown menu for smaller screens:
+
+![Screenshot of dropdown button](/assets/dropdownbutton.png)
+![Screenshot of dropdown menu](/assets/dropdownopen.png)
+
 #### Footer
 The footer is also permanent across the site giving users access to linked social media sites.
 
@@ -83,8 +88,21 @@ The site allows users to register an account so they can comment on posts. It al
 ![Screenshot of logout](/assets/signout.png)
 
 #### Admin site
-The admin site allows the admin to make posts and approve comments on posts. The approval on comments is to make sure they are appropriate for the blog.
+The admin site allows the admin to make posts and approve comments on posts.
+
 ![Screenshot of Admin site](/assets/adminsite.png)
+
+#### Admin Posts
+The admin site allows the admin to create, edit and delete posts on the blog.
+
+![Screenshot of post list](/assets/postlist.png)
+![Screenshot of post edit page](/assets/postpageadmin.png)
+
+#### Admin Comments
+The admin site allows the admin to create, edit, delete and approve comments. This is mainy to make sure all comments are appropriate.
+
+![Screenshot of list of comments](/assets/commentlistadmin.png)
+![Screenshot of comment page](/assets/commentpageadmin.png)
 
 ### Testing
 
