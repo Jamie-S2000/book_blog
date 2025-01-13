@@ -95,7 +95,7 @@ The admin site allows the admin to make posts and approve comments on posts.
 #### Admin Posts
 The admin site allows the admin to create, edit and delete posts on the blog.
 
-![Screenshot of post list](/assets/postlist.png)
+![Screenshot of post list](/assets/postlistadmin.png)
 ![Screenshot of post edit page](/assets/postpageadmin.png)
 
 #### Admin Comments
