@@ -4,6 +4,8 @@ All web page Testing was conducted on an iMac (safari, Google Chrome), Windows L
 
 The Admin testing was done on an iMac and was done to check the database functionality.
 
+The database hosting site used has been changed and each test has been repeated to make sure everything works the same as with the previous database.
+
 ## Web Page testing
 
 ### Nav Bar
