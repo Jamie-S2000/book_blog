@@ -163,6 +163,16 @@ In the project create an env.py file in the root directory.
 The elephantSQL database URL should be used as the DATABASE_URL
 A secret key should be pasted as the SECRET_KEY value, this does not need to be the same as the Heroku one.
 
+### New Database
+A new database host has been deloyed on the project. The steps taken to make this change were:
+- A new env.py file was created within the project with the new database URL
+- The categories for the database were migrated over using:
+  ```
+  python3 manage.py migrate
+  ```
+  in the terminal
+- Heroku's confic vars were updated to use the new database URL
+
 ### settings.py
 In settings.py add:
 ```
